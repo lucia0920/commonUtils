@@ -2,7 +2,7 @@
   "name": "toolUtils",
   "version": "1.0.0",
   "description": "utils 简易常用函数工具库",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "build": "rollup --config",
     "test": "jest --no-cache",
@@ -16,13 +16,16 @@
   "author": "lucia",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^27.0.2",
-    "jest": "^27.3.1",
-    "rollup": "^2.58.0",
-    "rollup-plugin-typescript": "^1.0.1",
-    "ts-jest": "^27.0.7",
-    "tslib": "^2.3.1",
-    "typedoc": "^0.22.6",
-    "typescript": "^4.4.4"
+    "@types/jest": "^26.0.15",
+    "jest": "^26.6.3",
+    "rollup": "^2.33.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "ts-jest": "^26.4.4",
+    "tslib": "^2.0.3",
+    "typedoc": "^0.19.2",
+    "typedoc-neo-theme": "^1.0.10",
+    "typescript": "^4.0.5"
   }
 }

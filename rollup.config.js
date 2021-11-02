@@ -1,7 +1,7 @@
-import typescript from "rollup-plugin-typescript";
+import typescript from "rollup-plugin-typescript2";
 
 export default {
-    input: "modules/index.js",
+    input: "modules/index.ts",
     output: [
       {
         file: "lib/bundle.cjs.js",
