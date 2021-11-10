@@ -152,6 +152,16 @@ const regExpr = {
     if (isNaN(num) || num == undefined || num == null) { return; }
     let newNum = Math.abs(Math.round(num * Math.pow(10, n)) / Math.pow(10, n));
     return newNum.toFixed(n)
+  },
+  /**
+    * 保留指定小数位数的正数
+    * @param bankNum 位数
+    * @param n 位数
+    * @returns {boolean}
+    */
+  checkHasEmoji(str) {
+    const regEmoji = /[\uD83C|\uD83D|\uD83E][\uDC00-\uDFFF][\u200D|\uFE0F]|[\uD83C|\uD83D|\uD83E][\uDC00-\uDFFF]|[0-9|*|#]\uFE0F\u20E3|[0-9|#]\u20E3|[\u203C-\u3299]\uFE0F\u200D|[\u203C-\u3299]\uFE0F|[\u2122-\u2B55]|\u303D|[\A9|\AE]\u3030|\uA9|\uAE|\u3030/ig // 如果为true，字符串含有emoji表情 ，false不含 
+    return regEmoji.test(str)
   }
 
 }
