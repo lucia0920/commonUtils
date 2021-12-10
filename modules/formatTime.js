@@ -387,6 +387,30 @@ const formatTime = {
     }
     // result = `相差${year}年${month}月${day}天`;
     return { yearMount: year, monthMount: month, dayMount: day }
+  },
+  /**
+   * 几分钟倒计时
+   * @param minute 分钟
+   */
+  resetTime: (minute) => {
+    var timer = null;
+    var second = 0;
+    minute < 10 && (minute = '0' + minute);
+    function countDown() {
+      second--;
+      second < 10 && (second = '0' + second);
+      if (second.length >= 3) {
+        second = 59;
+        minute = "0" + (Number(minute) - 1);
+      }
+      if (minute == '00' && second == '00') {
+        minute = '00';
+        second = '00';
+        clearInterval(timer);
+      }
+      console.log(minute + "分钟" + second + "秒");
+    }
+    timer = setInterval(countDown, 1000);
   }
 }
 
