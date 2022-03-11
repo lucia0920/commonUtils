@@ -231,7 +231,22 @@ const ArrayTool = {
           hash[array1[i]] = true;
       }
       return false;
-    }
+    },
+  /**
+    * 判断一个数组对象某个值是否重复
+    * @param arr
+    * @param key
+    * @returns {boolean}
+  */
+  checkIsRepeat: (arr, key) => {
+      const array = arr ? arr.map(item => item[key]) : [];
+      const arraySet = new Set(array);
+      if (arraySet.size == array.length && array.length !== 0) {
+          return false
+      } else {
+          return true
+      }
+  }
 }
 
 export {ArrayTool}
